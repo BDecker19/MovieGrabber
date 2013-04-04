@@ -3,13 +3,12 @@ require 'sinatra'
 require_relative 'movies'
 
 get '/' do
-  # Just have a nice welcome page
+ 	erb :index
 end
 
-post '/film' do
-  # Search for a Movie
-  # HINT - what is in params ?
-  Movie.get_film_info(name)
-
-  # Display the movie in the page
+post '/film_name' do
+	# could redirect /:film_name?
+	name = params[:film_name]
+	m = Movie.get_film_info(name)
+	erb :movie, :locals => {:film => m}
 end

@@ -1,5 +1,6 @@
 require 'httparty'
 require 'json'
+require 'pry'
 
 class Movie
 
@@ -9,12 +10,12 @@ class Movie
   def self.get_film_info(name)    
     imdb_data = HTTParty.get("http://www.omdbapi.com/?t=#{name}")
     movie_info = JSON(imdb_data)
-    
+
     # Create a Movie object...
     m = Movie.new
     m.title = movie_info["Title"]
     m.year = movie_info["Year"]
-    m.rating = movie_info["Rating"]
+    m.rating = movie_info["Rated"]
     m.genre = movie_info["Genre"]
     m.director = movie_info["Director"]
     m.actors = movie_info["Actors"].split(",")
