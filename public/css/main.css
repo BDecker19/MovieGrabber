@@ -1,0 +1,29 @@
+body {
+	color: black;
+	font-family: "Chalet", Georgia, serif;  
+}
+
+head {
+	background-color: black;
+}
+
+#container{
+	width: 500px;
+	background-color: blue;
+	margin: 0 auto;
+	padding: 10px;
+
+}
+
+#header{
+	color: white;
+}
+
+p {
+	display: block;
+}
+
+.flash{
+	color: red;
+	margin-bottom: 10pt;
+}
