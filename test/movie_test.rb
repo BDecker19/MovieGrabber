@@ -12,8 +12,8 @@ class MovieGrabberTest < Test::Unit::TestCase
   #     @@db = SQLite3::Database.new("test/test.db")
   # end
 
-  def test_get_film_info_method
-    movie = Movie.get_film_info("jaws")
+  def test_create_film_object_method
+    movie = Movie.create_film_object("jaws")
     assert_equal "Jaws", movie.title
     # Don't forget to create your movies table first, using sqlite3...
     # movies = @@db.execute("select * from movies")
